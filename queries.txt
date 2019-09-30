@@ -1,0 +1,28 @@
+mutation atualizarEquipe($id: Int!, $titulos: Int!) {
+  atualizarEquipe(id: $id, titulos: $titulos) {
+    nome
+    titulos
+  }
+}
+
+{
+  "id": 44,
+  "titulos": 1
+}
+
+
+==================================================================
+
+
+mutation atualizarEquipe($id: Int!, $titulos: Int!) {
+  atualizarEquipe(id: $id, titulos: $titulos) {
+    ... camposEquipe
+  }
+}
+
+fragment camposEquipe on EquipesDeFormula1 {
+  nome
+  titulos
+}
+
+===================================================================
